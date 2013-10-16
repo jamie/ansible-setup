@@ -1,0 +1,13 @@
+---
+- hosts: all
+  tasks:
+    - group_by: key={{ ansible_distribution }}
+
+- hosts: MacOSX
+  gather_facts: False
+  roles:
+    - mac
+
+- hosts: all
+  roles:
+    - common

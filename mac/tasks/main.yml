@@ -1,0 +1,21 @@
+---
+
+- name: Install homebrew
+  shell: which brew || curl -fsSL https://raw.github.com/mxcl/homebrew/go | ruby
+- name: Update homebrew
+  command: brew update
+- name: Upgrade homebrew package
+  command: brew upgrade
+- name: Clean up outdated homebrew packages
+  command: brew cleanup
+
+- name: Install git > 1.7.9.6
+  command: brew install git
+- name: Install mysql
+  command: brew install mysql
+- name: Install Ruby > 1.8
+  command: brew install ruby
+- name: Install tree
+  command: brew install tree
+- name: Install zsh
+  command: brew install zsh

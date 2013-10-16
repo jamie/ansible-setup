@@ -1,0 +1,4 @@
+#!/bin/bash
+
+cd ~/Dropbox/Unix/ansible
+ansible-playbook -i hosts site.yml

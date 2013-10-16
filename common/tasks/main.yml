@@ -1,0 +1,10 @@
+---
+
+- name: Symlink common files
+  command: ./stow chdir=~/Dropbox/Unix
+
+- name: Ensure correct ssh dir permissions
+  # Using canonical path here
+  file: path=~/Dropbox/Unix/dotfiles/.ssh state=directory mode=0700
+- name: Ensure correct ssh file permissions
+  shell: chmod 0600 ~/.ssh/*
